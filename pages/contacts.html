@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио студента - Контакты</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <div class="logo-placeholder">Л</div>
+          <div class="student-name">Ланец Артем</div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="projects.html">Проекты</a></li>
+            <li><a href="diary.html">Дневник</a></li>
+            <li><a href="contacts.html" class="active">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h2>Свяжитесь со мной</h2>
+
+        <div class="contact-container">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Имя:</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="form-control"
+                  placeholder="Введите ваше имя"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Введите ваш email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Сообщение:</label>
+                <textarea
+                  id="message"
+                  class="form-control"
+                  placeholder="Введите ваше сообщение"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn">Отправить сообщение</button>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <h3>Контакты:</h3>
+            <div class="contact-item">
+              <div class="contact-icon">☒</div>
+              <div>lanetsarn@yandex.ru</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">☐</div>
+              <div>
+                GitHub:
+                <a href="https://github.com/TanKisTHaChiLe">TanKisTHaChiLe</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">♀</div>
+              <div>Москва, Россия</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 Контакты</p>
+      </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>

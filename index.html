@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио студента - Главная</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <div class="logo-placeholder">Л</div>
+          <div class="student-name">Ланец Артем</div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="pages/projects.html">Проекты</a></li>
+            <li><a href="pages/diary.html">Дневник</a></li>
+            <li><a href="pages/contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="hero">
+          <img
+            class="photo-placeholder"
+            alt="фото профиля"
+            src="./assets/images/profile_image.jpg"
+          />
+          <div class="hero-text">
+            <h1>Привет! Я студент<br />группы ЭФБО-02-24</h1>
+            <p>Увлекаюсь веб-разработкой</p>
+            <a href="assets/Ланец Артем Резюме.pdf" class="btn" download
+              >Скачать резюме</a
+            >
+          </div>
+        </div>
+
+        <div class="skills-section">
+          <h2>Мои навыки</h2>
+          <div class="skill">
+            <div class="skill-name">
+              <span>HTML/CSS</span>
+              <span>99%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 99%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">
+              <span>JavaScript</span>
+              <span>99%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 99%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">
+              <span>Bootstrap</span>
+              <span>55%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 55%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">
+              <span>React</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-section">
+          <h2>Лучшие проекты</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <img
+                class="project-card-image"
+                src="./assets/images/stellar-burgers_feed-screen.png"
+                alt="Скриншот приложения"
+              />
+              <div class="project-card-title">stellar-burgers</div>
+            </div>
+            <div class="project-card">
+              <img
+                class="project-card-image"
+                src="./assets/images/vk_main-screen.png"
+                alt="Скриншот приложения"
+              />
+              <div class="project-card-title">VK-contest-movie-ap</div>
+            </div>
+            <div class="project-card">
+              <img
+                class="project-card-image"
+                src="./assets/images/portfolio_main-screen.png"
+                alt="Скриншот приложения"
+              />
+              <div class="project-card-title">Интернет-магазин</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 Контакты</p>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
