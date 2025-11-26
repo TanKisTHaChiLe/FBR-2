@@ -171,17 +171,23 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-  padding: 5px 10px;
-  border-radius: 3px;
+  font-weight: 600;
+  transition: all 0.3s;
+  padding: 8px 16px;
+  border-radius: 4px;
   min-height: 44px;
   display: flex;
   align-items: center;
 }
 
-nav ul li a:hover,
 nav ul li a.active {
+  background-color: #1a5276;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a:hover {
   background-color: #3498db;
   color: white;
 }
@@ -243,22 +249,30 @@ nav ul li a.active {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #3498db;
+  background-color: #044f81;
   color: white;
   padding-inline: var(--space-lg);
   padding-block: max(0.5rem, calc((44px - 1em) / 2));
-  border-radius: 5px;
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  border: none;
+  font-weight: 700;
+  transition: all 0.3s;
+  border: 2px solid #044f81;
   cursor: pointer;
   min-height: 44px;
   font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
-  background-color: #2980b9;
+  background-color: #1c6ea4;
+  border-color: #1c6ea4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
 }
 
 .skills-section,
@@ -321,7 +335,7 @@ nav ul li a.active {
   height: 280px;
   align-items: center;
   justify-content: space-between;
-  font-weight: bold;
+  font-weight: 600;
   color: #2c3e50;
   text-align: center;
   overflow: hidden;
@@ -363,21 +377,31 @@ nav ul li a.active {
 
 .filter-btn {
   padding: max(8px, calc((44px - 1em) / 2)) 15px;
-  background-color: #ecf0f1;
-  border: none;
-  border-radius: 5px;
+  background-color: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
   min-height: 44px;
+  font-weight: 500;
+  color: #495057;
 }
 
 .filter-btn.active {
-  background-color: #3498db;
+  background-color: #2980b9;
   color: white;
+  border-color: #2980b9;
+  font-weight: 600;
 }
 
 .filter-btn:hover {
-  background-color: #bdc3c7;
+  background-color: #e9ecef;
+  border-color: #2980b9;
+}
+
+.filter-btn.active:hover {
+  background-color: #1c6ea4;
+  border-color: #1c6ea4;
 }
 
 .projects-grid-large {
@@ -425,10 +449,12 @@ nav ul li a.active {
 }
 
 .tag {
-  background-color: #ecf0f1;
+  background-color: #e9ecef;
   padding: 5px 10px;
   border-radius: 15px;
   font-size: 0.8rem;
+  color: #495057;
+  font-weight: 500;
 }
 
 .diary-grid {
@@ -448,10 +474,12 @@ nav ul li a.active {
   font-weight: bold;
   margin-right: 15px;
   min-width: 100px;
+  color: #2c3e50;
 }
 
 .diary-task {
   flex: 1;
+  color: #2c3e50;
 }
 
 .status {
@@ -467,12 +495,12 @@ nav ul li a.active {
 }
 
 .status-completed {
-  background-color: #2ecc71;
+  background-color: #27ae60;
   color: white;
 }
 
 .status-in-progress {
-  background-color: #f39c12;
+  background-color: #e67e22;
   color: white;
 }
 
@@ -484,25 +512,30 @@ nav ul li a.active {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
+  color: #2c3e50;
 }
 
 .add-entry-btn {
   display: block;
   width: 100%;
   padding: max(12px, calc((44px - 1em) / 2));
-  background-color: #3498db;
+  background-color: #2980b9;
   color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
+  border: 2px solid #2980b9;
+  border-radius: 6px;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
   margin-top: 20px;
   min-height: 44px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .add-entry-btn:hover {
-  background-color: #2980b9;
+  background-color: #1c6ea4;
+  border-color: #1c6ea4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-container {
@@ -517,17 +550,26 @@ nav ul li a.active {
 
 .form-group label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: 500;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
 }
 
 .form-control {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
   font-size: 1rem;
   min-height: 44px;
+  color: #2c3e50;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.1);
 }
 
 textarea.form-control {
@@ -545,13 +587,14 @@ textarea.form-control {
 .contact-icon {
   width: 30px;
   height: 30px;
-  background-color: #3498db;
+  background-color: #2980b9;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 15px;
   color: white;
+  font-weight: bold;
 }
 
 .modal {
@@ -598,24 +641,26 @@ textarea.form-control {
   font-weight: bold;
   cursor: pointer;
   z-index: 1001;
-  color: #333;
+  color: #2c3e50;
   width: 44px;
   height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .close-modal:hover {
-  background-color: #f0f0f0;
+  background-color: #e74c3c;
+  color: white;
 }
 
 .modal-header {
   padding: 30px 30px 20px;
   border-bottom: 1px solid #ecf0f1;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #2980b9 0%, #2c3e50 100%);
   color: white;
   border-radius: 10px 10px 0 0;
 }
@@ -663,6 +708,7 @@ textarea.form-control {
   color: #2c3e50;
   margin: 25px 0 15px 0;
   font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .project-details p {
@@ -689,12 +735,12 @@ textarea.form-control {
 }
 
 .tech-tag {
-  background-color: #3498db;
+  background-color: #2980b9;
   color: white;
   padding: 5px 12px;
   border-radius: 15px;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .project-links {
@@ -757,7 +803,7 @@ footer {
   .btn,
   .filter-btn {
     box-shadow: inset 0 0 0 2px #fff;
-    border: 2px solid #000;
+    border: 3px solid #000;
   }
 
   .project-card,
@@ -990,64 +1036,26 @@ img[loading="lazy"].loaded {
   }
 }
 
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #0066cc;
-  color: white;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 10000;
-  border-radius: 0 0 4px 4px;
-  transition: top 0.3s;
-}
-
-.skip-link:focus {
-  top: 0;
-}
-
 .required-asterisk {
-  color: #d32f2f;
+  color: #e74c3c;
 }
 
 .required::after {
   content: " *";
-  color: #d32f2f;
+  color: #e74c3c;
 }
 
 .error-message {
-  color: #d32f2f;
+  color: #e74c3c;
   font-size: 0.875rem;
   margin-top: 0.25rem;
   display: block;
+  font-weight: 500;
 }
 
 .form-control[aria-invalid="true"] {
-  border-color: #d32f2f;
-  box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
-}
-
-.form-control:focus,
-.btn:focus,
-.filter-btn:focus,
-.project-card-large:focus,
-.close-modal:focus {
-  outline: 3px solid #0066cc;
-  outline-offset: 2px;
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
 }
 
 .form-hint {
@@ -1057,166 +1065,76 @@ img[loading="lazy"].loaded {
   display: block;
 }
 
-.contact-icon {
-  color: #333;
-}
-
-.tag, .tech-tag {
-  background-color: #e9ecef;
-  color: #333;
-  border: 1px solid #dee2e6;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-}
-
-.modal.active {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 90%;
-  max-width: 800px;
-  max-height: 90vh;
-  overflow-y: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
-.close-modal {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 4px;
-  z-index: 1001;
-}
-
-.close-modal:hover,
-.close-modal:focus {
-  background-color: #f0f0f0;
-  color: #000;
-}
-
 .success-message {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: #4CAF50;
+  background: #27ae60;
   color: white;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 16px 20px;
+  border-radius: 6px;
   z-index: 10000;
   max-width: 300px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
 }
 
-.status-completed {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.status-in-progress {
-  background-color: #FF9800;
-  color: white;
-}
-
-.project-card-large {
-  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card-large:hover,
-.project-card-large:focus {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-
-
-.nav a:focus {
-  outline: 2px solid #0066cc;
+.form-control:focus,
+.btn:focus,
+.filter-btn:focus,
+.project-card-large:focus,
+.close-modal:focus,
+nav ul li a:focus {
+  outline: 3px solid #2980b9;
   outline-offset: 2px;
 }
 
-fieldset {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-legend {
-  padding: 0 10px;
-  font-weight: bold;
-}
-
-body {
-  color: #333;
-  line-height: 1.6;
-}
-
-.section-title {
-  color: #222;
-}
-
-@media (max-width: 768px) {
-  .filters {
-    flex-wrap: wrap;
-    gap: 8px;
+@media (prefers-color-scheme: dark) {
+  .btn {
+    background-color: #3498db;
+    border-color: #3498db;
   }
-  
-  .filter-btn {
-    flex: 1;
-    min-width: calc(50% - 8px);
-  }
-  
-  .modal-content {
-    width: 95%;
-    margin: 10px;
-  }
-}
 
-button:focus,
-a:focus,
-input:focus,
-textarea:focus,
-select:focus {
-  outline: 2px solid #0066cc;
-  outline-offset: 2px;
+  .btn:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+  }
+
+  .filter-btn.active {
+    background-color: #3498db;
+    border-color: #3498db;
+  }
+
+  nav ul li a.active {
+    background-color: #3498db;
+  }
 }
 
 @media (prefers-contrast: high) {
   .btn {
-    border: 2px solid;
+    border: 3px solid #000;
+    background-color: #000;
+    color: #fff;
   }
-  
+
   .form-control {
-    border: 2px solid;
+    border: 3px solid #000;
   }
-  
+
   .project-card {
-    border: 1px solid;
+    border: 2px solid #000;
+  }
+
+  nav ul li a.active {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+
+  .filter-btn.active {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
   }
 }
 
@@ -1226,8 +1144,12 @@ select:focus {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   .project-card-large {
     transition: none;
+  }
+
+  .btn:hover {
+    transform: none;
   }
 }
