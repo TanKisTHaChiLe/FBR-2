@@ -181,9 +181,12 @@ function openProjectModal(projectId) {
       screenshotElement.className = "screenshot";
 
       const imgElement = document.createElement("img");
-      imgElement.src = screenshot;
-      imgElement.alt = `Скриншот проекта ${project.title} - ${index + 1}`;
-      imgElement.loading = "lazy";
+
+      imgElement.srcset = `${screenshot.src400} 400w, ${screenshot.src1200} 1200w`;
+      imgElement.sizes = "(max-width: 768px) 300px, 600px";
+      imgElement.alt =
+        screenshot.alt || `Скриншот проекта ${project.title} - ${index + 1}`;
+      imgElement.className = "responsive-image";
 
       screenshotElement.appendChild(imgElement);
       screenshotsContainer.appendChild(screenshotElement);

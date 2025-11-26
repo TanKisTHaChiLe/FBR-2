@@ -11,8 +11,16 @@ const projectsData = {
     ],
     technologies: ["HTML5", "CSS3", "Flexbox", "Grid", "Responsive Design"],
     screenshots: [
-      "../assets/images/visitka_main-screen.png",
-      "../assets/images/visitka_mobile-screen.png",
+      {
+        src400: "../assets/images/resume_main-foto-400.png",
+        src1200: "../assets/images/resume_main-foto.png",
+        alt: "Главный экран личного сайта",
+      },
+      {
+        src400: "../assets/images/visitka_mobile-screen-400.png",
+        src1200: "../assets/images/visitka_mobile-screen.png",
+        alt: "Мобильная версия сайта",
+      },
     ],
     links: {
       demo: "https://example.com/personal-site",
@@ -34,9 +42,16 @@ const projectsData = {
     ],
     technologies: ["TypeScript", "LocalStorage", "CSS3", "HTML5", "React"],
     screenshots: [
-      "../assets/images/vk_main-screen.png",
-      "../assets/images/vk_film-information--screen.png",
-      "../assets/images/vk_like-screen.png",
+      {
+        src400: "../assets/images/vk_film-information--screen-400.png",
+        src1200: "../assets/images/vk_film-information--screen.png",
+        alt: "Экран информации о фильме",
+      },
+      {
+        src400: "../assets/images/vk_like-screen-400.png",
+        src1200: "../assets/images/vk_like-screen.png",
+        alt: "Экран избранных фильмов",
+      },
     ],
     links: {
       demo: "https://example.com/todo-demo",
@@ -63,9 +78,21 @@ const projectsData = {
       "REST API",
     ],
     screenshots: [
-      "../assets/images/stellar-burgers_feed-screen.png",
-      "../assets/images/stellar-burgers_login-screen.png",
-      "../assets/images/stellar-burgers_registration-screen.png",
+      {
+        src400: "../assets/images/stellar-burgers_feed-screen-400.png",
+        src1200: "../assets/images/stellar-burgers_feed-screen.png",
+        alt: "Лента заказов",
+      },
+      {
+        src400: "../assets/images/stellar-burgers_login-screen-400.png",
+        src1200: "../assets/images/stellar-burgers_login-screen.png",
+        alt: "Экран авторизации",
+      },
+      {
+        src400: "../assets/images/stellar-burgers_registration-screen-400.png",
+        src1200: "../assets/images/stellar-burgers_registration-screen.png",
+        alt: "Экран регистрации",
+      },
     ],
     links: {
       demo: "https://example.com/store-demo",
@@ -84,9 +111,16 @@ const projectsData = {
     ],
     technologies: ["Bootstrap 5", "HTML5", "CSS3", "JavaScript"],
     screenshots: [
-      "../assets/images/portfolio_main-screen.png",
-      "../assets/images/portfolio_goods-screen.png",
-      "../assets/images/portfolio_contacts-screen.png",
+      {
+        src400: "../assets/images/portfolio_main-screen-400.png",
+        src1200: "../assets/images/portfolio_main-screen.png",
+        alt: "Главный экран магазина",
+      },
+      {
+        src400: "../assets/images/portfolio_contacts-screen-400.png",
+        src1200: "../assets/images/portfolio_contacts-screen.png",
+        alt: "Страница контактов",
+      },
     ],
     links: {
       demo: "https://example.com/portfolio-demo",

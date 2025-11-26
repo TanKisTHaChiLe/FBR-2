@@ -2,18 +2,23 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title>Портфолио студента - Главная</title>
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
-  <body>
+  <body class="page">
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header>
       <div class="container header-content">
         <div class="logo">
           <div class="logo-placeholder">Л</div>
           <div class="student-name">Ланец Артем</div>
         </div>
-        <nav>
+        <nav class="nav" aria-label="Основная навигация">
           <ul>
             <li><a href="index.html" class="active">Главная</a></li>
             <li><a href="pages/projects.html">Проекты</a></li>
@@ -24,25 +29,35 @@
       </div>
     </header>
 
-    <main>
+    <main id="main" class="main">
       <div class="container">
-        <div class="hero">
+        <section class="hero">
           <img
-            class="photo-placeholder"
-            alt="фото профиля"
-            src="./assets/images/profile_image.jpg"
+            class="photo-placeholder responsive-image"
+            alt="Портрет студента Ланец Артем"
+            src="./assets/images/me_foto-400.jpg"
+            srcset="
+              ./assets/images/me_foto-400.jpg   400w,
+              ./assets/images/me_foto-1200.jpg 1200w
+            "
+            sizes="(max-width: 768px) 200px, 400px"
+            width="300"
+            height="300"
+            loading="eager"
           />
           <div class="hero-text">
-            <h1>Привет! Я студент<br />группы ЭФБО-02-24</h1>
+            <h1 class="hero-greeting">
+              Привет! Я студент<br />группы ЭФБО-02-24
+            </h1>
             <p>Увлекаюсь веб-разработкой</p>
             <a href="assets/Ланец Артем Резюме.pdf" class="btn" download
               >Скачать резюме</a
             >
           </div>
-        </div>
+        </section>
 
-        <div class="skills-section">
-          <h2>Мои навыки</h2>
+        <section class="skills-section">
+          <h2 class="section-title">Мои навыки</h2>
           <div class="skill">
             <div class="skill-name">
               <span>HTML/CSS</span>
@@ -79,41 +94,59 @@
               <div class="skill-level" style="width: 75%"></div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="projects-section">
-          <h2>Лучшие проекты</h2>
+        <section class="projects-section">
+          <h2 class="section-title">Лучшие проекты</h2>
           <div class="projects-grid">
-            <div class="project-card">
+            <article class="project-card">
               <img
-                class="project-card-image"
-                src="./assets/images/stellar-burgers_feed-screen.png"
-                alt="Скриншот приложения"
+                class="project-card-image object-fit-cover"
+                srcset="
+                  ./assets/images/stellar-burgers_feed-screen-400.png  400w,
+                  ./assets/images/stellar-burgers_feed-screen.png     1200w
+                "
+                sizes="(max-width: 768px) 200px, 400px"
+                alt="Скриншот приложения Stellar Burgers"
+                width="300"
+                height="200"
               />
               <div class="project-card-title">stellar-burgers</div>
-            </div>
-            <div class="project-card">
+            </article>
+            <article class="project-card">
               <img
-                class="project-card-image"
-                src="./assets/images/vk_main-screen.png"
-                alt="Скриншот приложения"
+                class="project-card-image object-fit-cover"
+                srcset="
+                  ./assets/images/vk_film-information--screen-400.png  400w,
+                  ./assets/images/vk_film-information--screen.png     1200w
+                "
+                sizes="(max-width: 768px) 200px, 400px"
+                alt="Скриншот приложения VK Movie"
+                width="300"
+                height="200"
               />
               <div class="project-card-title">VK-contest-movie-ap</div>
-            </div>
-            <div class="project-card">
+            </article>
+            <article class="project-card">
               <img
-                class="project-card-image"
-                src="./assets/images/portfolio_main-screen.png"
-                alt="Скриншот приложения"
+                class="project-card-image object-fit-cover"
+                srcset="
+                  ./assets/images/portfolio_main-screen-400.png  400w,
+                  ./assets/images/portfolio_main-screen.png     1200w
+                "
+                sizes="(max-width: 768px) 200px, 400px"
+                alt="Скриншот интернет-магазина"
+                width="300"
+                height="200"
               />
               <div class="project-card-title">Интернет-магазин</div>
-            </div>
+            </article>
           </div>
-        </div>
+        </section>
       </div>
     </main>
 
-    <footer>
+    <footer class="footer">
       <div class="container">
         <p>© 2025 Контакты</p>
       </div>

@@ -2,18 +2,23 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title>Портфолио студента - Дневник</title>
     <link rel="stylesheet" href="../styles/styles.css" />
   </head>
-  <body>
+  <body class="page">
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header>
       <div class="container header-content">
         <div class="logo">
           <div class="logo-placeholder">Л</div>
           <div class="student-name">Ланец Артем</div>
         </div>
-        <nav>
+        <nav class="nav" aria-label="Основная навигация">
           <ul>
             <li><a href="../index.html">Главная</a></li>
             <li><a href="projects.html">Проекты</a></li>
@@ -24,37 +29,57 @@
       </div>
     </header>
 
-    <main>
+    <main id="main" class="main">
       <div class="container">
-        <h2>Мой учебный прогресс</h2>
+        <h2 class="section-title">Мой учебный прогресс</h2>
 
         <div class="diary-grid">
-          <div class="diary-section">
+          <section class="diary-section">
             <h3>Задачи</h3>
             <div class="diary-entry">
               <div class="diary-date">15 дек</div>
               <div class="diary-task">Верстка макета сайта</div>
-              <div class="status status-completed">✓</div>
+              <div
+                class="status status-completed"
+                aria-label="Задача выполнена"
+              >
+                ✓
+              </div>
             </div>
             <div class="diary-entry">
               <div class="diary-date">10 дек</div>
               <div class="diary-task">JavaScript основы</div>
-              <div class="status status-completed">✓</div>
+              <div
+                class="status status-completed"
+                aria-label="Задача выполнена"
+              >
+                ✓
+              </div>
             </div>
             <div class="diary-entry">
               <div class="diary-date">05 дек</div>
               <div class="diary-task">Работа с формами</div>
-              <div class="status status-in-progress">in progress</div>
+              <div
+                class="status status-in-progress"
+                aria-label="Задача в процессе"
+              >
+                in progress
+              </div>
             </div>
             <div class="diary-entry">
               <div class="diary-date">01 дек</div>
               <div class="diary-task">Адаптивный дизайн</div>
-              <div class="status status-in-progress">in progress</div>
+              <div
+                class="status status-in-progress"
+                aria-label="Задача в процессе"
+              >
+                in progress
+              </div>
             </div>
             <button class="add-entry-btn">Добавить запись</button>
-          </div>
+          </section>
 
-          <div class="courses-section">
+          <section class="courses-section">
             <h3>Текущие курсы</h3>
             <div class="course-progress">
               <div class="course-name">
@@ -83,12 +108,12 @@
                 <div class="skill-level" style="width: 50%"></div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </main>
 
-    <footer>
+    <footer class="footer">
       <div class="container">
         <p>© 2025 Контакты</p>
       </div>

@@ -2,18 +2,23 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title>Портфолио студента - Проекты</title>
     <link rel="stylesheet" href="../styles/styles.css" />
   </head>
-  <body>
+  <body class="page">
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header>
       <div class="container header-content">
         <div class="logo">
           <div class="logo-placeholder">Л</div>
           <div class="student-name">Ланец Артем</div>
         </div>
-        <nav>
+        <nav class="nav" aria-label="Основная навигация">
           <ul>
             <li><a href="../index.html">Главная</a></li>
             <li><a href="projects.html" class="active">Проекты</a></li>
@@ -24,11 +29,11 @@
       </div>
     </header>
 
-    <main>
+    <main id="main" class="main">
       <div class="container">
         <div class="projects-header">
-          <h2>Мои проекты</h2>
-          <div class="filters">
+          <h2 class="section-title">Мои проекты</h2>
+          <div class="filters" role="group" aria-label="Фильтры проектов">
             <button class="filter-btn active" data-filter="all">Все</button>
             <button class="filter-btn" data-filter="html">HTML</button>
             <button class="filter-btn" data-filter="js">JS</button>
@@ -44,93 +49,128 @@
           </div>
         </div>
 
-        <div class="projects-grid-large">
-          <div
-            class="project-card-large"
-            data-categories="html,css,js"
-            data-project="1"
-          >
-            <img
-              class="project-image"
-              src="../assets/images/visitka_main-screen.png"
-            />
-            <div class="project-info">
-              <h3>Личный сайт</h3>
-              <p>Простой личный сайт-визитка с использованием HTML и CSS</p>
-              <div class="project-tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
+        <section class="projects-area">
+          <div class="projects-grid-large">
+            <article
+              class="project-card-large"
+              data-categories="html,css,js"
+              data-project="1"
+              tabindex="0"
+            >
+              <img
+                class="project-image object-fit-cover"
+                srcset="
+                  ../assets/images/resume_main-foto-400.png  400w,
+                  ../assets/images/resume_main-foto.png     1200w
+                "
+                sizes="(max-width: 768px) 300px, 600px"
+                alt="Главный экран личного сайта"
+                width="400"
+                height="200"
+              />
+              <div class="project-info">
+                <h3>Личный сайт</h3>
+                <p>Простой личный сайт-визитка с использованием HTML и CSS</p>
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
               </div>
-            </div>
-          </div>
+            </article>
 
-          <div
-            class="project-card-large"
-            data-categories="react,typescript,cra"
-            data-project="2"
-          >
-            <img
-              class="project-image"
-              src="../assets/images/vk_main-screen.png"
-            />
-            <div class="project-info">
-              <h3>VK-contest-movie-app</h3>
-              <p>Приложения для просмотра информации о фильмах</p>
-              <div class="project-tags">
-                <span class="tag">React</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">CRA</span>
+            <article
+              class="project-card-large"
+              data-categories="react,typescript,cra"
+              data-project="2"
+              tabindex="0"
+            >
+              <img
+                class="project-image object-fit-cover"
+                srcset="
+                  ../assets/images/vk_film-information--screen-400.png  400w,
+                  ../assets/images/vk_film-information--screen.png     1200w
+                "
+                sizes="(max-width: 768px) 300px, 600px"
+                alt="Экран информации о фильме VK"
+                width="400"
+                height="200"
+              />
+              <div class="project-info">
+                <h3>VK-contest-movie-app</h3>
+                <p>Приложения для просмотра информации о фильмах</p>
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">CRA</span>
+                </div>
               </div>
-            </div>
-          </div>
-          <div
-            class="project-card-large"
-            data-categories="react,typescript,webpack"
-            data-project="3"
-          >
-            <img
-              class="project-image"
-              src="../assets/images/stellar-burgers_feed-screen.png"
-            />
-            <div class="project-info">
-              <h3>stellar-burgers</h3>
-              <p>Сервис для заказа бургеров</p>
-              <div class="project-tags">
-                <span class="tag">React</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">Webpack</span>
-              </div>
-            </div>
-          </div>
+            </article>
 
-          <div
-            class="project-card-large"
-            data-categories="html,css,bootstrap,js"
-            data-project="4"
-          >
-            <img
-              class="project-image"
-              src="../assets/images/portfolio_main-screen.png"
-            />
-            <div class="project-info">
-              <h3>Портфолио</h3>
-              <p>Адаптивное портфолио с использованием Bootstrap</p>
-              <div class="project-tags">
-                <span class="tag">Bootstrap</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
+            <article
+              class="project-card-large"
+              data-categories="react,typescript,webpack"
+              data-project="3"
+              tabindex="0"
+            >
+              <img
+                class="project-image object-fit-cover"
+                srcset="
+                  ../assets/images/stellar-burgers_feed-screen-400.png  400w,
+                  ../assets/images/stellar-burgers_feed-screen.png     1200w
+                "
+                sizes="(max-width: 768px) 300px, 600px"
+                alt="Лента заказов Stellar Burgers"
+                width="400"
+                height="200"
+              />
+              <div class="project-info">
+                <h3>stellar-burgers</h3>
+                <p>Сервис для заказа бургеров</p>
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Webpack</span>
+                </div>
               </div>
-            </div>
+            </article>
+
+            <article
+              class="project-card-large"
+              data-categories="html,css,bootstrap,js"
+              data-project="4"
+              tabindex="0"
+            >
+              <img
+                class="project-image object-fit-cover"
+                srcset="
+                  ../assets/images/portfolio_main-screen-400.png  400w,
+                  ../assets/images/portfolio_main-screen.png     1200w
+                "
+                sizes="(max-width: 768px) 300px, 600px"
+                alt="Главный экран портфолио"
+                width="400"
+                height="200"
+              />
+              <div class="project-info">
+                <h3>Портфолио</h3>
+                <p>Адаптивное портфолио с использованием Bootstrap</p>
+                <div class="project-tags">
+                  <span class="tag">Bootstrap</span>
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+              </div>
+            </article>
           </div>
-        </div>
+        </section>
       </div>
     </main>
 
     <div id="project-modal" class="modal">
       <div class="modal-content">
-        <span class="close-modal">&times;</span>
+        <span class="close-modal" aria-label="Закрыть окно">&times;</span>
         <div class="modal-header">
           <h2 id="modal-title">Название проекта</h2>
           <div class="project-tags" id="modal-tags"></div>
@@ -153,7 +193,7 @@
       </div>
     </div>
 
-    <footer>
+    <footer class="footer">
       <div class="container">
         <p>© 2025 Контакты</p>
       </div>
