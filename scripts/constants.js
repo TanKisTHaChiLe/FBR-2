@@ -1,130 +1,98 @@
 const projectsData = {
-  1: {
-    title: "Сайт-визитка",
-    description:
-      "Личный сайт-визитка, разработанный с использованием современных технологий HTML5 и CSS3. Сайт полностью адаптивен и корректно отображается на всех устройствах. Проект демонстрирует навыки семантической верстки и кроссбраузерной совместимости.",
-    tags: ["HTML", "CSS"],
-    features: [
-      "Адаптивный дизайн для всех устройств",
-      "Семантическая верстка",
-      "Кроссбраузерная совместимость",
-    ],
-    technologies: ["HTML5", "CSS3", "Flexbox", "Grid", "Responsive Design"],
+  "1": {
+    title: "Личный сайт",
+    description: "Простой личный сайт-визитка с использованием HTML и CSS. Включает основные разделы: главная, проекты, дневник и контакты.",
+    tags: ["HTML", "CSS", "JavaScript"],
     screenshots: [
       {
         src400: "../assets/images/resume_main-foto-400.png",
         src1200: "../assets/images/resume_main-foto.png",
-        alt: "Главный экран личного сайта",
-      },
-      {
-        src400: "../assets/images/visitka_mobile-screen-400.png",
-        src1200: "../assets/images/visitka_mobile-screen.png",
-        alt: "Мобильная версия сайта",
-      },
+        alt: "Главный экран личного сайта"
+      }
     ],
-    links: {
-      demo: "https://example.com/personal-site",
-      github: "https://github.com/username/personal-site",
-    },
-  },
-  2: {
-    title: "VK-contest-movie-app",
-    description:
-      "Веб-приложение для просмотра информации о фильмах(VK-contest-movieapp на гитхабе). В этом проекте я использовал: React/Ts, стейт менеджер MobX, REST API(Axios), реализовал:  поиск по названию, фильтрация по жанрам и годам, пагинация, а также добавление в избранное (с сохранением в localStorage)",
-    tags: ["TypeScript", "React", "LocalStorage", "Web App"],
     features: [
-      "Поиск",
-      "Добавление в избранное",
-      "Фильтраци",
-      "Сохранение данных в LocalStorage",
-      "Адаптивный интерфейс",
-      "Валидация ввода",
+      "Адаптивный дизайн",
+      "Семантическая верстка",
+      "Доступность (a11y)",
+      "Оптимизация изображений",
+      "Кроссбраузерная совместимость"
     ],
-    technologies: ["TypeScript", "LocalStorage", "CSS3", "HTML5", "React"],
+    technologies: ["HTML5", "CSS3", "JavaScript ES6+", "Responsive Design"],
+    links: {
+      demo: "../index.html",
+      github: "https://github.com/TanKisTHaChiLe/personal-website"
+    }
+  },
+  "2": {
+    title: "VK-contest-movie-app",
+    description: "Приложение для просмотра информации о фильмах с использованием React и TypeScript. Интеграция с API кинопоиска.",
+    tags: ["React", "TypeScript", "CRA"],
     screenshots: [
       {
         src400: "../assets/images/vk_film-information--screen-400.png",
         src1200: "../assets/images/vk_film-information--screen.png",
-        alt: "Экран информации о фильме",
-      },
-      {
-        src400: "../assets/images/vk_like-screen-400.png",
-        src1200: "../assets/images/vk_like-screen.png",
-        alt: "Экран избранных фильмов",
-      },
+        alt: "Экран информации о фильме VK"
+      }
     ],
-    links: {
-      demo: "https://example.com/todo-demo",
-      github: "https://github.com/TanKisTHaChiLe/VK-contest-movie-app",
-    },
-  },
-  3: {
-    title: "stellar-burgers",
-    description:
-      "Веб-приложение «Stellar Burgers» представляет собой сервис для заказа бургеров, разработанный на современном стеке технологий: React/TypeScript, стейт-менеджер Redux Toolkit для управления состоянием и React Router для клиентской маршрутизации с взаимодействием через REST API.",
-    tags: ["React", "Redux", "API", "Webpack"],
     features: [
-      "Конструктор бургеров",
-      "Лента заказов",
-      "Система авторизации",
-      "История заказов",
-      "Адаптивный дизайн",
+      "Поиск фильмов",
+      "Детальная информация о фильмах",
+      "Рейтинги и отзывы",
+      "Избранное",
+      "Адаптивный интерфейс"
     ],
-    technologies: [
-      "React",
-      "Redux Toolkit",
-      "React Router",
-      "Styled Components",
-      "REST API",
-    ],
+    technologies: ["React", "TypeScript", "CRA", "REST API", "CSS Modules"],
+    links: {
+      demo: "https://vk-movie-app-demo.netlify.app",
+      github: "https://github.com/TanKisTHaChiLe/vk-movie-app"
+    }
+  },
+  "3": {
+    title: "stellar-burgers",
+    description: "Сервис для заказа бургеров с конструктором ингредиентов. Реализован на React с TypeScript и Webpack.",
+    tags: ["React", "TypeScript", "Webpack"],
     screenshots: [
       {
         src400: "../assets/images/stellar-burgers_feed-screen-400.png",
         src1200: "../assets/images/stellar-burgers_feed-screen.png",
-        alt: "Лента заказов",
-      },
-      {
-        src400: "../assets/images/stellar-burgers_login-screen-400.png",
-        src1200: "../assets/images/stellar-burgers_login-screen.png",
-        alt: "Экран авторизации",
-      },
-      {
-        src400: "../assets/images/stellar-burgers_registration-screen-400.png",
-        src1200: "../assets/images/stellar-burgers_registration-screen.png",
-        alt: "Экран регистрации",
-      },
+        alt: "Лента заказов Stellar Burgers"
+      }
     ],
-    links: {
-      demo: "https://example.com/store-demo",
-      github: "https://github.com/TanKisTHaChiLe/stellar-burgers",
-    },
-  },
-  4: {
-    title: "Интернет магазин",
-    description:
-      "Полнофункциональный интернет-магазин с системой управления состоянием, корзиной покупок и имитацией работы с API. Проект демонстрирует навыки работы с React и современными подходами к разработке веб-приложений",
-    tags: ["Bootstrap", "HTML", "CSS"],
     features: [
-      "Полностью адаптивный дизайн",
-      "Оптимизированная производительность",
-      "Плавные анимации",
+      "Конструктор бургеров",
+      "Drag & Drop ингредиентов",
+      "История заказов",
+      "Авторизация",
+      "WebSocket для live-обновлений"
     ],
-    technologies: ["Bootstrap 5", "HTML5", "CSS3", "JavaScript"],
+    technologies: ["React", "TypeScript", "Webpack", "Redux", "WebSocket", "Jest"],
+    links: {
+      demo: "https://stellar-burgers-demo.netlify.app",
+      github: "https://github.com/TanKisTHaChiLe/stellar-burgers"
+    }
+  },
+  "4": {
+    title: "Портфолио",
+    description: "Адаптивное портфолио с использованием Bootstrap. Включает галерею проектов, блог и контактную форму.",
+    tags: ["Bootstrap", "HTML", "CSS", "JavaScript"],
     screenshots: [
       {
         src400: "../assets/images/portfolio_main-screen-400.png",
         src1200: "../assets/images/portfolio_main-screen.png",
-        alt: "Главный экран магазина",
-      },
-      {
-        src400: "../assets/images/portfolio_contacts-screen-400.png",
-        src1200: "../assets/images/portfolio_contacts-screen.png",
-        alt: "Страница контактов",
-      },
+        alt: "Главный экран портфолио"
+      }
     ],
+    features: [
+      "Bootstrap 5",
+      "Адаптивная сетка",
+      "Анимации",
+      "Форма обратной связи",
+      "Оптимизация производительности"
+    ],
+    technologies: ["Bootstrap 5", "HTML5", "CSS3", "JavaScript", "jQuery"],
     links: {
-      demo: "https://example.com/portfolio-demo",
-      github: "https://github.com/TanKisTHaChiLe/frontend-and-backend-practice",
-    },
-  },
+      demo: "../index.html",
+      github: "https://github.com/TanKisTHaChiLe/portfolio-bootstrap"
+    }
+  }
 };

@@ -12,35 +12,36 @@
   <body class="page">
     <a class="skip-link" href="#main">Перейти к основному содержимому</a>
 
-    <header>
+    <header role="banner">
       <div class="container header-content">
         <div class="logo">
-          <div class="logo-placeholder">Л</div>
+          <div class="logo-placeholder" aria-hidden="true">Л</div>
           <div class="student-name">Ланец Артем</div>
         </div>
-        <nav class="nav" aria-label="Основная навигация">
+        <nav class="nav" aria-label="Основная навигация" role="navigation">
           <ul>
             <li><a href="../index.html">Главная</a></li>
             <li><a href="projects.html">Проекты</a></li>
-            <li><a href="diary.html" class="active">Дневник</a></li>
+            <li><a href="diary.html" class="active" aria-current="page">Дневник</a></li>
             <li><a href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main id="main" class="main">
+    <main id="main" class="main" role="main">
       <div class="container">
-        <h2 class="section-title">Мой учебный прогресс</h2>
+        <h1 class="section-title">Мой учебный прогресс</h1>
 
         <div class="diary-grid">
-          <section class="diary-section">
-            <h3>Задачи</h3>
+          <section class="diary-section" aria-labelledby="tasks-heading">
+            <h2 id="tasks-heading">Задачи</h2>
             <div class="diary-entry">
               <div class="diary-date">15 дек</div>
               <div class="diary-task">Верстка макета сайта</div>
               <div
                 class="status status-completed"
+                role="status"
                 aria-label="Задача выполнена"
               >
                 ✓
@@ -51,6 +52,7 @@
               <div class="diary-task">JavaScript основы</div>
               <div
                 class="status status-completed"
+                role="status"
                 aria-label="Задача выполнена"
               >
                 ✓
@@ -61,6 +63,7 @@
               <div class="diary-task">Работа с формами</div>
               <div
                 class="status status-in-progress"
+                role="status"
                 aria-label="Задача в процессе"
               >
                 in progress
@@ -71,17 +74,21 @@
               <div class="diary-task">Адаптивный дизайн</div>
               <div
                 class="status status-in-progress"
+                role="status"
                 aria-label="Задача в процессе"
               >
                 in progress
               </div>
             </div>
-            <button class="add-entry-btn">Добавить запись</button>
+            <button class="add-entry-btn" aria-describedby="add-task-hint">
+              Добавить запись
+            </button>
+            <span id="add-task-hint" class="visually-hidden">Открывает диалог для добавления новой задачи</span>
           </section>
 
-          <section class="courses-section">
-            <h3>Текущие курсы</h3>
-            <div class="course-progress">
+          <section class="courses-section" aria-labelledby="courses-heading">
+            <h2 id="courses-heading">Текущие курсы</h2>
+            <div class="course-progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Веб-разработка уровень 90%">
               <div class="course-name">
                 <span>Веб-разработка</span>
                 <span>90%</span>
@@ -90,7 +97,7 @@
                 <div class="skill-level" style="width: 90%"></div>
               </div>
             </div>
-            <div class="course-progress">
+            <div class="course-progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript уровень 70%">
               <div class="course-name">
                 <span>JavaScript</span>
                 <span>70%</span>
@@ -99,7 +106,7 @@
                 <div class="skill-level" style="width: 70%"></div>
               </div>
             </div>
-            <div class="course-progress">
+            <div class="course-progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="React уровень 50%">
               <div class="course-name">
                 <span>React</span>
                 <span>50%</span>
@@ -113,7 +120,7 @@
       </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <p>© 2025 Контакты</p>
       </div>

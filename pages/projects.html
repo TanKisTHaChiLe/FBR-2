@@ -12,16 +12,16 @@
   <body class="page">
     <a class="skip-link" href="#main">Перейти к основному содержимому</a>
 
-    <header>
+    <header role="banner">
       <div class="container header-content">
         <div class="logo">
-          <div class="logo-placeholder">Л</div>
+          <div class="logo-placeholder" aria-hidden="true">Л</div>
           <div class="student-name">Ланец Артем</div>
         </div>
-        <nav class="nav" aria-label="Основная навигация">
+        <nav class="nav" aria-label="Основная навигация" role="navigation">
           <ul>
             <li><a href="../index.html">Главная</a></li>
-            <li><a href="projects.html" class="active">Проекты</a></li>
+            <li><a href="projects.html" class="active" aria-current="page">Проекты</a></li>
             <li><a href="diary.html">Дневник</a></li>
             <li><a href="contacts.html">Контакты</a></li>
           </ul>
@@ -29,33 +29,31 @@
       </div>
     </header>
 
-    <main id="main" class="main">
+    <main id="main" class="main" role="main">
       <div class="container">
-        <div class="projects-header">
-          <h2 class="section-title">Мои проекты</h2>
+        <div class="projects-header" aria-labelledby="projects-heading">
+          <h1 id="projects-heading" class="section-title">Мои проекты</h1>
           <div class="filters" role="group" aria-label="Фильтры проектов">
-            <button class="filter-btn active" data-filter="all">Все</button>
-            <button class="filter-btn" data-filter="html">HTML</button>
-            <button class="filter-btn" data-filter="js">JS</button>
-            <button class="filter-btn" data-filter="react">React</button>
-            <button class="filter-btn" data-filter="typescript">
-              TypeScript
-            </button>
-            <button class="filter-btn" data-filter="webpack">Webpack</button>
-            <button class="filter-btn" data-filter="cra">CRA</button>
-            <button class="filter-btn" data-filter="bootstrap">
-              Bootstrap
-            </button>
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">Все</button>
+            <button class="filter-btn" data-filter="html" aria-pressed="false">HTML</button>
+            <button class="filter-btn" data-filter="js" aria-pressed="false">JS</button>
+            <button class="filter-btn" data-filter="react" aria-pressed="false">React</button>
+            <button class="filter-btn" data-filter="typescript" aria-pressed="false">TypeScript</button>
+            <button class="filter-btn" data-filter="webpack" aria-pressed="false">Webpack</button>
+            <button class="filter-btn" data-filter="cra" aria-pressed="false">CRA</button>
+            <button class="filter-btn" data-filter="bootstrap" aria-pressed="false">Bootstrap</button>
           </div>
         </div>
 
-        <section class="projects-area">
+        <section class="projects-area" aria-label="Сетка проектов">
           <div class="projects-grid-large">
             <article
               class="project-card-large"
               data-categories="html,css,js"
               data-project="1"
               tabindex="0"
+              aria-labelledby="project1-title"
+              role="article"
             >
               <img
                 class="project-image object-fit-cover"
@@ -64,12 +62,12 @@
                   ../assets/images/resume_main-foto.png     1200w
                 "
                 sizes="(max-width: 768px) 300px, 600px"
-                alt="Главный экран личного сайта"
+                alt="Главный экран личного сайта - портфолио студента"
                 width="400"
                 height="200"
               />
               <div class="project-info">
-                <h3>Личный сайт</h3>
+                <h3 id="project1-title">Личный сайт</h3>
                 <p>Простой личный сайт-визитка с использованием HTML и CSS</p>
                 <div class="project-tags">
                   <span class="tag">HTML</span>
@@ -84,6 +82,8 @@
               data-categories="react,typescript,cra"
               data-project="2"
               tabindex="0"
+              aria-labelledby="project2-title"
+              role="article"
             >
               <img
                 class="project-image object-fit-cover"
@@ -92,12 +92,12 @@
                   ../assets/images/vk_film-information--screen.png     1200w
                 "
                 sizes="(max-width: 768px) 300px, 600px"
-                alt="Экран информации о фильме VK"
+                alt="Экран информации о фильме VK - детали фильма и рейтинг"
                 width="400"
                 height="200"
               />
               <div class="project-info">
-                <h3>VK-contest-movie-app</h3>
+                <h3 id="project2-title">VK-contest-movie-app</h3>
                 <p>Приложения для просмотра информации о фильмах</p>
                 <div class="project-tags">
                   <span class="tag">React</span>
@@ -112,6 +112,8 @@
               data-categories="react,typescript,webpack"
               data-project="3"
               tabindex="0"
+              aria-labelledby="project3-title"
+              role="article"
             >
               <img
                 class="project-image object-fit-cover"
@@ -120,12 +122,12 @@
                   ../assets/images/stellar-burgers_feed-screen.png     1200w
                 "
                 sizes="(max-width: 768px) 300px, 600px"
-                alt="Лента заказов Stellar Burgers"
+                alt="Лента заказов Stellar Burgers - интерфейс конструктора бургеров"
                 width="400"
                 height="200"
               />
               <div class="project-info">
-                <h3>stellar-burgers</h3>
+                <h3 id="project3-title">stellar-burgers</h3>
                 <p>Сервис для заказа бургеров</p>
                 <div class="project-tags">
                   <span class="tag">React</span>
@@ -140,6 +142,8 @@
               data-categories="html,css,bootstrap,js"
               data-project="4"
               tabindex="0"
+              aria-labelledby="project4-title"
+              role="article"
             >
               <img
                 class="project-image object-fit-cover"
@@ -148,12 +152,12 @@
                   ../assets/images/portfolio_main-screen.png     1200w
                 "
                 sizes="(max-width: 768px) 300px, 600px"
-                alt="Главный экран портфолио"
+                alt="Главный экран портфолио - адаптивный дизайн"
                 width="400"
                 height="200"
               />
               <div class="project-info">
-                <h3>Портфолио</h3>
+                <h3 id="project4-title">Портфолио</h3>
                 <p>Адаптивное портфолио с использованием Bootstrap</p>
                 <div class="project-tags">
                   <span class="tag">Bootstrap</span>
@@ -168,9 +172,9 @@
       </div>
     </main>
 
-    <div id="project-modal" class="modal">
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
       <div class="modal-content">
-        <span class="close-modal" aria-label="Закрыть окно">&times;</span>
+        <button class="close-modal" aria-label="Закрыть окно">&times;</button>
         <div class="modal-header">
           <h2 id="modal-title">Название проекта</h2>
           <div class="project-tags" id="modal-tags"></div>
@@ -193,7 +197,7 @@
       </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <p>© 2025 Контакты</p>
       </div>
